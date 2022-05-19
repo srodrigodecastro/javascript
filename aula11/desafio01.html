@@ -8,27 +8,25 @@
 </head>
 <body>
     <h1>Verificador de Nacionalidade</h1>
-    <p><strong>Informe o seu País de origem:</strong></p>
+    <p><strong>Informe o seu País de origem, com a primeira letra em maiúsculo:</strong></p>
     <input type="text" name="txtnac" id="txtnac">
     <input type="button" value="Checagem" onclick="check()">
     <div id="res">
            
     </div>
     <script>
-
         function check() {
-            
-            var pais = window.document.getElementById('txtnac')
-            var res = window.document.querySelector('div#res')
-            res.innerHTML = `<p>Seu país de origem é o <strong>${pais.value}</strong></p>`   
 
+            var pais = document.getElementById('txtnac')
+            var res = document.querySelector('div#res')
+            
+            res.innerHTML = `<p>Seu país de origem é <strong>${pais.value}</strong>!</p>`   
             if (pais.value == 'Brasil') {
                 res.innerHTML += '<p>Você é Brasileiro!</p>'
             } else {
                 res.innerHTML += '<p>Você é Estrangeiro!</p>'
             }
         }
-
     </script>
 
 </body>
