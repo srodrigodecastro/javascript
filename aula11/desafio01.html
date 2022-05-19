@@ -17,19 +17,19 @@
     <script>
 
         function check() {
+            
             var pais = window.document.getElementById('txtnac')
             var res = window.document.querySelector('div#res')
-            res.innerHTML = `Seu país de origem é o <strong>${pais.value}</strong>`   
+            res.innerHTML = `<p>Seu país de origem é o <strong>${pais.value}</strong></p>`   
 
             if (pais.value == 'Brasil') {
-                res.innerHTML += '<p>Você é Brasileiro!'
+                res.innerHTML += '<p>Você é Brasileiro!</p>'
             } else {
                 res.innerHTML += '<p>Você é Estrangeiro!</p>'
             }
         }
 
     </script>
-
 
 </body>
 </html>
