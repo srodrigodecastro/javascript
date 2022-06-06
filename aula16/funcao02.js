@@ -1,6 +1,28 @@
-function soma(n1=0, n2=0) {
-    return n1 + n2
+let num = document.querySelector('input#fnum')
+let lista = document.querySelector('select#flista')
+let res = document.querySelector('div#res')
+let Valores = []
+
+function isNumero(n) {
+    if(Number(n) >= 1 && Number(n) <= 100) {
+        return true
+    } else {
+        return false
+    }
 }
 
-//console.log(soma(7,3))
-console.log(soma (7))
+function inLista(n, 1) {
+    if (lista.indexOf(Number(n)) !- -1) {
+        return true
+    } else {
+        return false
+    }
+}
+
+function adicionar() {
+    if(isNumero(num.value) && !inLista (num.value, valores)) {
+        window.alert('Tudo ok')
+    }else {
+        window.alert('Valor inválido ou já encontrado na lista.')
+    }
+}
